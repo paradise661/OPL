@@ -12,10 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('frontend/assets/img/favicons/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('frontend/assets/img/favicons/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('frontend/assets/img/favicons/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('frontend/assets/img/favicons/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="{{ asset($setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : 'frontend/images/logo.png') }}"
+        type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="{{ asset($setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : 'frontend/images/logo.png') }}"
+        type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="{{ asset($setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : 'frontend/images/logo.png') }}"
+        type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="{{ asset($setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : 'frontend/images/logo.png') }}"
+        type="image/x-icon">
     <link rel="apple-touch-icon" sizes="114x114"
         href="{{ asset('frontend/assets/img/favicons/apple-icon-114x114.png') }}">
     <link rel="apple-touch-icon" sizes="120x120"
