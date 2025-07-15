@@ -3,7 +3,7 @@
     <section class="hero-style1">
         <div class="hero-bg"
             style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .jpg') }}');">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .jpg') }}');">
         </div>
 
         <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
@@ -829,7 +829,7 @@
 
     <!-- Top Selling Product End -->
     <!-- Testimonials Area Start -->
-    <section class="testimonials space-top space-bottom">
+    {{-- <section class="testimonials space-top space-bottom">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-7">
@@ -925,7 +925,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Testimonials Area End -->
 
     <!-- Blog Area Start -->
