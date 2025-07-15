@@ -3,7 +3,7 @@
     <section class="hero-style1">
         <div class="hero-bg"
             style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .jpg') }}');">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .jpg') }}');">
         </div>
 
         <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
@@ -929,93 +929,62 @@
     <!-- Testimonials Area End -->
 
     <!-- Blog Area Start -->
-    <section class="blog space-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="title-area text-center">
-                        <div class="sec-icon">
-                            <img src="{{ asset('frontend/assets/img/icons/s-1-1.png') }}" alt="icon">
-                        </div>
-                        <span class="sec-subtitle">News & Updates</span>
-                        <h2 class="sec-title">Recent Articles</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row vs-carousel" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2"
-                data-sm-slide-show="1">
-                <div class="col-lg-4">
-                    <div class="vs-blog blog-style1">
-                        <div class="blog-img">
-                            <img class="img w-100" src="{{ asset('frontend/assets/img/blog/blog-1-1.jpg') }}"
-                                alt="Blog Image">
-                        </div>
-                        <span class="blog-date">24 <span>Feb, 2022</span></span>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="blog.html" tabindex="0">Posted <span>By ABC</span></a>
-                                <a class="blog-meta-icon" href="blog.html" tabindex="0"><i
-                                        class="fas fa-comments"></i> 14 Comments</a>
+    @if ($blogs->isNotEmpty())
+        <section class="blog space-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="title-area text-center">
+                            <div class="sec-icon">
+                                <img src="{{ asset('frontend/assets/img/icons/s-1-1.png') }}" alt="icon">
                             </div>
-                            <h3 class="blog-title h5">
-                                <a href="#" tabindex="0">
-                                    Options For a Cannabis Education in All Countries
-                                </a>
-                            </h3>
+                            <span class="sec-subtitle">{{ $setting['blog_title'] ?? '' }}</span>
+                            <h2 class="sec-title">{{ $setting['blog_description'] ?? '' }}</h2>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="vs-blog blog-style1">
-                        <div class="blog-img">
-                            <img class="img w-100" src="{{ asset('frontend/assets/img/blog/blog-1-2.jpg') }}"
-                                alt="Blog Image">
-                        </div>
-                        <span class="blog-date">24 <span>Feb, 2022</span></span>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="blog.html" tabindex="0">Posted <span>By ABC</span></a>
-                                <a class="blog-meta-icon" href="blog.html" tabindex="0"><i
-                                        class="fas fa-comments"></i> 14 Comments</a>
+
+                <div class="row">
+                    <div class="vs-carousel" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2"
+                        data-sm-slide-show="1">
+                        @foreach ($blogs as $blog)
+                            <div class="col-lg-4">
+                                <div class="vs-blog blog-style1">
+                                    <div class="blog-img">
+                                        {!! get_image($blog->image, '', 'home-blog') !!}
+                                    </div>
+                                    <span class="blog-date">
+                                        {{ date('d', strtotime($blog->created_at)) }}
+                                        <span>{{ date('M Y', strtotime($blog->created_at)) }}</span>
+                                    </span>
+                                    <div class="blog-content">
+                                        {{-- <div class="blog-meta">
+                                            <a href="blog.html">Posted <span>By ABC</span></a>
+                                            <a class="blog-meta-icon" href="blog.html"><i class="fas fa-comments"></i> 14
+                                                Comments</a>
+                                        </div> --}}
+                                        <h3 class="blog-title h5">
+                                            <a href="{{ route('blogsingle', $blog->slug) }}">
+                                                {{ $blog->name ?? '' }}
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="blog-title h5">
-                                <a href="#" tabindex="0">
-                                    How Does A Lotion Containing CBD Help Your Skin?
-                                </a>
-                            </h3>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="vs-blog blog-style1">
-                        <div class="blog-img">
-                            <img class="img w-100" src="{{ asset('frontend/assets/img/blog/blog-1-3.jpg') }}"
-                                alt="Blog Image">
-                        </div>
-                        <span class="blog-date">24 <span>Feb, 2022</span></span>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="blog.html" tabindex="0">Posted <span>By ABC</span></a>
-                                <a class="blog-meta-icon" href="#" tabindex="0"><i class="fas fa-comments"></i>
-                                    14 Comments</a>
-                            </div>
-                            <h3 class="blog-title h5">
-                                <a href="blog-details.html" tabindex="0">
-                                    Why CBD Product’s Ingredients List Must Be Examined?
-                                </a>
-                            </h3>
+
+                <div class="row justify-content-center" style="padding: 50px;">
+                    <div class="col-auto">
+                        <div class="d-inline-flex pt-30">
+                            <a class="vs-btn style2" href="#">View All Blog</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" style="padding: 50px";>
-                <div class="col-auto">
-                    <div class="d-inline-flex pt-30">
-                        <a class="vs-btn style2" href="#">View All Blog</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    @endif
+
     <!-- Blog Area End -->
 @endsection
