@@ -1,136 +1,139 @@
-<footer>
-    <div class="footer-top-wrap">
+<section class="footer-layout1 z-index-common" data-bg-src="public/frontend/assets/img/bg/footer-bg-1-1.png">
+    <img class="footer-ele1" src="public/frontend/assets/img/footer/falling-leaves.png" alt="">
+    <div class="widget-area">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                    <div class="footer-widget">
-                        <a class="logo" href="/">
-                            <img src="{{ $setting['site_footer_logo'] ? asset(get_media($setting['site_footer_logo'])->fullurl) : '' }}"
-                                alt="{{ $setting['site_footer_logo'] ? get_media($setting['site_footer_logo'])->alt : '' }}"
-                                width="100px" height="90px">
-                        </a>
-                        <p class="x-small mt-3">
-                            {{ $setting['site_information'] ?? '' }}
-                        </p>
-
-                        <div class="flex-column mt-24 small  text-white gap-2">
-                            <div class="d-flex align-items-center">
-                                <p class="mb-0"><a href="tel:{{ $setting['site_phone'] ?? '' }}"><i
-                                            class="fas fa-phone"></i>
-                                        {{ $setting['site_phone'] ?? '' }}</a>
-                                    @if ($setting['site_phone_two'])
-                                        <br>
-                                        <a href="tel:{{ $setting['site_phone_two'] ?? '' }}"><i
-                                                class="fas fa-phone"></i>
-                                            {{ $setting['site_phone_two'] ?? '' }}</a>
-                                    @endif
-                                </p>
+            <div class="row gy-5">
+                <div class="col-lg-4">
+                    <div class="widget footer-widget">
+                        <div class="vs-widget-about">
+                            <div class="footer-logo">
+                                <a href="#"><img class="logo" src="frontend/assets/img/logoo.jpg"
+                                        alt="Cannabo"></a>
                             </div>
-                            <div class="d-flex align-items-center">
-                                <p class="mb-0"><a href="mailto:{{ $setting['site_email'] ?? '' }}"><i
-                                            class="fas fa-envelope"></i>
-                                        {{ $setting['site_email'] ?? '' }}</a>
-                                    @if ($setting['site_email_two'])
-                                        <br />
-                                        <a href="mailto:{{ $setting['site_email_two'] ?? '' }}"><i
-                                                class="fas fa-envelope"></i>
-                                            {{ $setting['site_email_two'] ?? '' }}</a>
-                                    @endif
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="mb-0"><i class="fas fa-search-location"></i>
-                                    {{ $setting['site_location'] ?? '' }}</p>
+                            <p class="footer-text">Aliquet eget sit amet tellus cras adipiscing
+                                enim eu turpis. Hac habitasse platea dictu
+                                mst quisque.</p>
+                            <div class="footer-social pt-xl-4">
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                    <div class="footer-widget">
-                        <h4 class="fw-title">Know Us</h4>
-                        <div class="fw-link">
-                            @php
-                                $menus = getMenus(2);
-                            @endphp
-                            @if ($menus)
-                                <ul>
-                                    @foreach ($menus as $key => $value)
-                                        <li>
-                                            <a href="{{ $value->slug }}" target="{{ $value->target ?? '_self' }}">//
-                                                {{ $value->name ?? $value->title }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            @endif
+                <div class="col-lg-4">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Contact Information</h3>
+                        <div class="footer-info">
+                            <div class="footer-info__icon">
+                                <i>
+                                    <img src="frontend/assets/img/icons/footer-info-1-1.png" alt="footer info">
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <div class="footer-info__link pe-xl-5">
+                                    <p>Babu Ram Acharya Marg(Corporate Office ), Sinamangal Kathmandu</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-info">
+                            <div class="footer-info__icon">
+                                <i>
+                                    <img src="frontend/assets/img/icons/footer-info-1-2.png" alt="footer info">
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <span class="footer-info__label">Phone No:</span>
+                                <div class="footer-info__link">
+                                    <a href="tel:01-4110761">01-4110761</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-info">
+                            <div class="footer-info__icon">
+                                <i>
+                                    <img src="frontend/assets/img/icons/footer-info-1-3.png" alt="footer info">
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <span class="footer-info__label">Email Address:</span>
+                                <div class="footer-info__link">
+                                    <a href="mailto:info@opl.com.np">info@opl.com.np</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="footer-widget">
-                        <h4 class="fw-title">Our Policies</h4>
-                        <div class="fw-link">
-                            @php
-                                $menus = getMenus(2);
-                            @endphp
-                            @if ($menus)
-                                <ul>
-                                    @foreach ($menus as $key => $value)
-                                        <li>
-                                            <a href="{{ $value->slug }}" target="{{ $value->target ?? '_self' }}">//
-                                                {{ $value->name ?? $value->title }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-                    <div class="footer-widget">
-                        <h4 class="fw-title">Our Services</h4>
-                        <div class="fw-link">
-                            @php
-                                $menus = getMenus(2);
-                            @endphp
-                            @if ($menus)
-                                <ul>
-                                    @foreach ($menus as $key => $value)
-                                        <li>
-                                            <a href="{{ $value->slug }}" target="{{ $value->target ?? '_self' }}">//
-                                                {{ $value->name ?? $value->title }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            @endif
+                <div class="col-lg-4">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Useful Links</h3>
+                        <div class="footer-menu--style">
+                            <ul>
+                                <li><a href="#">Our Process</a></li>
+                                <li><a href="#">Payments</a></li>
+                                <li><a href="#">Special Offers</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Regulations</a></li>
+                                <li><a href="#">Product Returns</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Our Team</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyright-area">
+    {{-- <div class="newsletter-form">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <div class="copyright-text">
-                        <p>© Copyright {{ date('Y') }} <a href="/">OHM PHARMACEUTICALS LAB. PVT. LTD.</a>
-                            All Rights Reserved | Made with <i class='fa fa-heart text-danger'></i> by <a
-                                href="https://paradiseit.com.np/" target="_blank"> Paradise InfoTech.</a>
-                        </p>
+            <form action="https://html.vecurosoft.com/cannabo/demo/mail.php">
+                <div class="row g-4 justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="title-area">
+                            <div class="title-icon">
+                                <img src="frontend/assets/img/icons/plane-icon.png" alt="plan-icon">
+                            </div>
+                            <div class="title-content">
+                                <h2 class="sec-title">Subscribe Newsletter</h2>
+                                <p class="sec-text">Delivered to your inbox along with special discounts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-group mb-0">
+                            <input class="form-control" type="email" placeholder="Enter Your Email">
+                            <button class="vs-btn style4">Subscribe Now</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="payment-method-img text-center text-md-right">
-                        <p>
-                            <a href="/terms-and-conditions">Terms and Conditions</a>
-                            |
-                            <a href="/privacy-policy">Privacy Policy</a>
-                            |
-                            <a href="/sitemap">Sitemap</a>
-                        </p>
+            </form>
+        </div>
+    </div> --}}
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row g-3 justify-content-center justify-content-xxl-between align-items-center">
+                <div class="col-lg-auto">
+                    <p class="copyright-text text-center text-lg-start">Copyright © <a href="#">OPL
+                            2025</a> . All
+                        rights reserved. <a href="https://paradiseit.com.np/">ParadiseIT</a></p>
+                </div>
+                {{-- <div class="col-lg-auto">
+                    <div class="footer-payment">
+                        <img src="frontend/assets/img/others/payment.png" alt="payment">
+                    </div>
+                </div> --}}
+                <div class="col-lg-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <div class="menu-all-pages-container">
+                            <ul class="menu justify-content-center justify-content-lg-end ">
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>
+</section>
