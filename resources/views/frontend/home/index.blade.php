@@ -3,7 +3,7 @@
     <section class="hero-style1">
         <div class="hero-bg"
             style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .jpg') }}');">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .jpg') }}');">
         </div>
 
         <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
@@ -1008,7 +1008,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" style="padding: 50px";>
                 <div class="col-auto">
                     <div class="d-inline-flex pt-30">
                         <a class="vs-btn style2" href="#">View All Blog</a>
@@ -1018,38 +1018,4 @@
         </div>
     </section>
     <!-- Blog Area End -->
-
-    <!-- Instagram Area -->
-    <div class="insta-layout1">
-        <div class="container">
-            <h2 class="sec-title2"><i class="fab fa-instagram"></i>Follow <a
-                    href="https://www.instagram.com/">@Cannabo</a></h2>
-            <div class="vs-carousel" data-slide-show="6" data-md-slide-show="4" data-sm-slide-show="3">
-                <div class="instagram-feed">
-                    <img src="{{ asset('frontend/assets/img/instagram/insta-1-1.jpg') }}" alt="instagram">
-                    <a class="instagram-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="instagram-feed">
-                    <img src="{{ asset('frontend/assets/img/instagram/insta-1-2.jpg') }}" alt="instagram">
-                    <a class="instagram-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="instagram-feed">
-                    <img src="{{ asset('frontend/assets/img/instagram/insta-1-3.jpg') }}" alt="instagram">
-                    <a class="instagram-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="instagram-feed">
-                    <img src="{{ asset('frontend/assets/img/instagram/insta-1-4.jpg') }}" alt="instagram">
-                    <a class="instagram-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="instagram-feed">
-                    <img src="{{ asset('frontend/assets/img/instagram/insta-1-5.jpg') }}" alt="instagram">
-                    <a class="instagram-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="instagram-feed">
-                    <img src="{{ asset('frontend/assets/img/instagram/insta-1-6.jpg') }}" alt="instagram">
-                    <a class="instagram-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
