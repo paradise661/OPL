@@ -3,18 +3,16 @@
     @if ($sliders->isNotEmpty())
         <section class="hero-style1">
 
-            <div class="hero-bg"
-                style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .jpg') }}');">
+            <div class="hero-bg" style="background-image: url('{{ asset('frontend/assets/img/bg/bg3.jpg') }}');">
             </div>
 
-            <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
+            {{-- <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
                 <img src="{{ asset('frontend/assets/img/hero/topp.png') }}" alt="hero leaf 2">
-            </div>
+            </div> --}}
 
-            <div class="hero-leaf3 wow fadeInUp" data-wow-delay="1.2s">
+            {{-- <div class="hero-leaf3 wow fadeInUp" data-wow-delay="1.2s">
                 <img src="{{ asset('frontend/assets/img/hero/med.png') }}" alt="hero leaf 3">
-            </div>
+            </div> --}}
 
             <div class="container">
                 <div class="vs-carousel" data-dots="true" data-fade="true">
@@ -71,7 +69,7 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="title-area text-center">
                         <div class="sec-icon">
-                            <img src="{{ asset('frontend/assets/img/icons/s-1-1.png') }}" alt="icon">
+                            <img src="{{ asset('frontend/assets/img/icons/icon2.png') }}" alt="icon">
                         </div>
                         <span class="sec-subtitle">Browser Category</span>
                         <h2 class="sec-title">Pick Your Product Type</h2>
