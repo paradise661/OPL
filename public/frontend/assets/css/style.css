@@ -2301,7 +2301,7 @@ textarea.is-invalid {
   position: absolute;
   content: "";
   height: 1px;
-  background-color: var(--theme-color);
+  /* background-color: var(--theme-color); */
   width: 182px;
   top: 50%;
   left: 50%;

@@ -2,7 +2,6 @@
 @section('content')
     @if ($sliders->isNotEmpty())
         <section class="hero-style1">
-
             <div class="hero-bg" style="background-image: url('{{ asset('frontend/assets/img/bg/bg3.jpg') }}');">
             </div>
 
@@ -60,9 +59,9 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="title-area text-center">
-                            <div class="sec-icon">
-                                <img src="{{ asset('frontend/assets/img/icons/icon2.png') }}" alt="icon">
-                            </div>
+                            {{-- <div class="sec-icon">
+                                <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
+                            </div> --}}
                             <span class="sec-subtitle">Browser Category</span>
                             <h2 class="sec-title">Pick Your Product Type</h2>
                         </div>
@@ -127,6 +126,11 @@
                             </p>
                         </div>
                     </div>
+                    <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
+                        <a class="vs-btn style1" href="{{ $slide->link ?? '#' }}">
+                            About Us <i class="fas fa-long-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,13 +176,13 @@
     <!-- Review Area End -->
 
     <!-- Products Area -->
-    <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/bg-1-1.jpg') }}">
+    <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
                     <div class="title-area text-center">
                         <div class="sec-icon">
-                            <img src="{{ asset('frontend/assets/img/icons/s-1-2.png') }}" alt="icon">
+                            <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
                         </div>
                         <span class="sec-subtitle">Quality Products</span>
                         <h2 class="sec-title">Trending Products</h2>
