@@ -3,7 +3,7 @@
     <section class="hero-style1">
         <div class="hero-bg"
             style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .jpg') }}');">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .jpg') }}');">
         </div>
 
         <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
@@ -22,17 +22,18 @@
                     <div class="row gy-4 justify-content-between align-items-center">
                         <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
                             <div class="hero-content">
-                                <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">High-Quality Guernsey</h1>
+                                <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">OHM PHARMACEUTICALS LAB PVT LTD
+                                </h1>
                                 <p class="hero-text wow fadeInUp" data-wow-delay="0.4s">
-                                    Working with a global network of wellbeing enthusiasts and health experts
+                                    When Your Patient needs extra care, OPL offers helping hands in your patient care
                                 </p>
-                                <span class="hero-subtitle wow fadeInUp" data-wow-delay="0.6s">
+                                {{-- <span class="hero-subtitle wow fadeInUp" data-wow-delay="0.6s">
                                     <img src="{{ asset('frontend/assets/img/icons/i-1-1.png') }}" alt="icon">
                                     1000MG, Whole Extract.
-                                </span>
+                                </span> --}}
                                 <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
                                     <a class="vs-btn style1" href="#">
-                                        Explore More <i class="fas fa-long-arrow-right"></i>
+                                        Contact Us <i class="fas fa-long-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -53,7 +54,7 @@
                 </div>
 
                 {{-- Slide 2 --}}
-                <div>
+                {{-- <div>
                     <div class="row gy-4 justify-content-between align-items-center">
                         <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
                             <div class="hero-content">
@@ -86,10 +87,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 {{-- Slide 3 --}}
-                <div>
+                {{-- <div>
                     <div class="row gy-4 justify-content-between align-items-center">
                         <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
                             <div class="hero-content">
@@ -122,7 +123,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -148,8 +149,7 @@
                 <div class="col-auto">
                     <div class="cate-style text-center">
                         <div class="cate-figure">
-                            <img class="cate-img" src="{{ asset('frontend/assets/img/cate/try.png') }}"
-                                alt="cate image">
+                            <img class="cate-img" src="{{ asset('frontend/assets/img/cate/try.png') }}" alt="cate image">
                         </div>
                         <div class="cate-content">
                             <h3 class="cate-title">
