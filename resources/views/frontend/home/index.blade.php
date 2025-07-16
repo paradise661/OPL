@@ -1,133 +1,67 @@
 @extends('layouts.frontend.master')
 @section('content')
-    <section class="hero-style1">
-        <div class="hero-bg"
-            style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .jpg') }}');">
-        </div>
+    @if ($sliders->isNotEmpty())
+        <section class="hero-style1">
 
-        <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
-            <img src="{{ asset('frontend/assets/img/hero/topp.png') }}" alt="hero leaf 2">
-        </div>
+            <div class="hero-bg"
+                style="background-image: url('{{ asset('frontend/assets/img/bg/bg3
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .jpg') }}');">
+            </div>
 
-        <div class="hero-leaf3 wow fadeInUp" data-wow-delay="1.2s">
-            <img src="{{ asset('frontend/assets/img/hero/med.png') }}" alt="hero leaf 3">
-        </div>
+            <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
+                <img src="{{ asset('frontend/assets/img/hero/topp.png') }}" alt="hero leaf 2">
+            </div>
 
-        <div class="container">
-            <div class="vs-carousel" data-dots="true" data-fade="true">
+            <div class="hero-leaf3 wow fadeInUp" data-wow-delay="1.2s">
+                <img src="{{ asset('frontend/assets/img/hero/med.png') }}" alt="hero leaf 3">
+            </div>
 
-                {{-- Slide 1 --}}
-                <div>
-                    <div class="row gy-4 justify-content-between align-items-center">
-                        <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
-                            <div class="hero-content">
-                                <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">OHM PHARMACEUTICALS LAB PVT LTD
-                                </h1>
-                                <p class="hero-text wow fadeInUp" data-wow-delay="0.4s">
-                                    When Your Patient needs extra care, OPL offers helping hands in your patient care
-                                </p>
-                                {{-- <span class="hero-subtitle wow fadeInUp" data-wow-delay="0.6s">
+            <div class="container">
+                <div class="vs-carousel" data-dots="true" data-fade="true">
+                    @foreach ($sliders as $key => $slide)
+                        {{-- Slide 1 --}}
+                        <div>
+                            <div class="row gy-4 justify-content-between align-items-center">
+                                <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
+                                    <div class="hero-content">
+                                        <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">{{ $slide->name ?? '' }}
+                                        </h1>
+                                        <p class="hero-text wow fadeInUp" data-wow-delay="0.4s">
+                                            {!! $slide->description ?? '' !!}
+                                        </p>
+                                        {{-- <span class="hero-subtitle wow fadeInUp" data-wow-delay="0.6s">
                                     <img src="{{ asset('frontend/assets/img/icons/i-1-1.png') }}" alt="icon">
                                     1000MG, Whole Extract.
                                 </span> --}}
-                                <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
-                                    <a class="vs-btn style1" href="#">
-                                        Contact Us <i class="fas fa-long-arrow-right"></i>
-                                    </a>
+                                        <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
+                                            <a class="vs-btn style1" href="{{ $slide->link ?? '#' }}">
+                                                Contact Us <i class="fas fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-auto col-xl-6 col-lg-8 mx-auto">
-                            <div class="hero-img wow fadeInUp" data-wow-delay="0.4s">
-                                <img src="{{ asset('frontend/assets/img/hero/h-1-1.png') }}" alt="hero image 1">
-                                <span class="circle"></span>
-                                <div class="hero-certificate">
+                                <div class="col-xxl-auto col-xl-6 col-lg-8 mx-auto">
+                                    <div class="hero-img wow fadeInUp" data-wow-delay="0.4s">
+                                        <img src="{{ get_image_url($slide->image, 'home-banner-slider') }}"
+                                            alt="Slider Image">
+                                        {{-- <span class="circle"></span> --}}
+                                        {{-- <div class="hero-certificate">
                                     <img src="{{ asset('frontend/assets/img/logos/roundd.png') }}" alt="logo">
-                                </div>
-                                <div class="hero-leaf">
+                                </div> --}}
+                                        {{-- <div class="hero-leaf">
                                     <img src="{{ asset('frontend/assets/img/hero/h-1-2.png') }}" alt="">
+                                </div> --}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+
                 </div>
-
-                {{-- Slide 2 --}}
-                {{-- <div>
-                    <div class="row gy-4 justify-content-between align-items-center">
-                        <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
-                            <div class="hero-content">
-                                <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">Pure Extracted from Swiss Alps
-                                </h1>
-                                <p class="hero-text wow fadeInUp" data-wow-delay="0.4s">
-                                    Working with a global network of wellbeing enthusiasts and health experts
-                                </p>
-                                <span class="hero-subtitle wow fadeInUp" data-wow-delay="0.6s">
-                                    <img src="{{ asset('frontend/assets/img/icons/i-1-1.png') }}" alt="icon">
-                                    1000MG, Whole Plant Extract.
-                                </span>
-                                <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
-                                    <a class="vs-btn style1" href="{{ url('products-grid') }}">
-                                        Start Exploring <i class="fas fa-long-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-auto col-xl-6 col-lg-8 mx-auto">
-                            <div class="hero-img">
-                                <img src="{{ asset('frontend/assets/img/hero/h-1-1.png') }}" alt="hero image 1">
-                                <span class="circle"></span>
-                                <div class="hero-certificate">
-                                    <img src="{{ asset('frontend/assets/img/logos/l-1-1.png') }}" alt="logo">
-                                </div>
-                                <div class="hero-leaf">
-                                    <img src="{{ asset('frontend/assets/img/hero/h-1-2.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
-                {{-- Slide 3 --}}
-                {{-- <div>
-                    <div class="row gy-4 justify-content-between align-items-center">
-                        <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
-                            <div class="hero-content">
-                                <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">Superior Grown in Oregon's
-                                </h1>
-                                <p class="hero-text wow fadeInUp" data-wow-delay="0.4s">
-                                    Working with a global network of wellbeing enthusiasts and health experts
-                                </p>
-                                <span class="hero-subtitle wow fadeInUp" data-wow-delay="0.6s">
-                                    <img src="{{ asset('frontend/assets/img/icons/i-1-1.png') }}" alt="icon">
-                                    1000MG, Whole Plant Extract.
-                                </span>
-                                <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
-                                    <a class="vs-btn style1" href="#">
-                                        Explore More <i class="fas fa-long-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-auto col-xl-6 col-lg-8 mx-auto">
-                            <div class="hero-img">
-                                <img src="{{ asset('frontend/assets/img/hero/h-1-1.png') }}" alt="hero image 1">
-                                <span class="circle"></span>
-                                <div class="hero-certificate">
-                                    <img src="{{ asset('frontend/assets/img/logos/l-1-1.png') }}" alt="logo">
-                                </div>
-                                <div class="hero-leaf">
-                                    <img src="{{ asset('frontend/assets/img/hero/h-1-2.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
             </div>
-        </div>
-    </section>
+
+        </section>
+    @endif
 
     <!-- Hero Area End -->
     <!-- Category Are Start -->
