@@ -27,8 +27,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $settings = Setting::pluck('value', 'key');
         $data1 = Setting::pluck('value', 'key');
         $data2 = Social::whereStatus(1)->oldest('order')->get();
+        View::share('settings', $settings);
         View::share('setting', $data1);
         View::share('socialdata', $data2);
 

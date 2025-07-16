@@ -6,18 +6,9 @@
             <div class="hero-bg" style="background-image: url('{{ asset('frontend/assets/img/bg/bg3.jpg') }}');">
             </div>
 
-            {{-- <div class="hero-leaf2 wow fadeInUp" data-wow-delay="1s">
-                <img src="{{ asset('frontend/assets/img/hero/topp.png') }}" alt="hero leaf 2">
-            </div> --}}
-
-            {{-- <div class="hero-leaf3 wow fadeInUp" data-wow-delay="1.2s">
-                <img src="{{ asset('frontend/assets/img/hero/med.png') }}" alt="hero leaf 3">
-            </div> --}}
-
             <div class="container">
                 <div class="vs-carousel" data-dots="true" data-fade="true">
                     @foreach ($sliders as $key => $slide)
-                        {{-- Slide 1 --}}
                         <div>
                             <div class="row gy-4 justify-content-between align-items-center">
                                 <div class="col-xxl-6 col-xl-6 col-lg-8 mx-auto">
@@ -63,128 +54,77 @@
 
     <!-- Hero Area End -->
     <!-- Category Are Start -->
-    <section class="cate space-top space-extra-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="title-area text-center">
-                        <div class="sec-icon">
-                            <img src="{{ asset('frontend/assets/img/icons/icon2.png') }}" alt="icon">
+    @if ($divisions)
+        <section class="cate space-top space-extra-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="title-area text-center">
+                            <div class="sec-icon">
+                                <img src="{{ asset('frontend/assets/img/icons/icon2.png') }}" alt="icon">
+                            </div>
+                            <span class="sec-subtitle">Browser Category</span>
+                            <h2 class="sec-title">Pick Your Product Type</h2>
                         </div>
-                        <span class="sec-subtitle">Browser Category</span>
-                        <h2 class="sec-title">Pick Your Product Type</h2>
                     </div>
+                </div>
+
+                <!-- ✅ One row for all divisions -->
+                <div class="row justify-content-center g-4">
+                    @foreach ($divisions as $dv)
+                        <div class="col-auto col-md-3 col-sm-6">
+                            <div class="cate-style text-center">
+                                <div class="cate-figure">
+                                    {!! get_image($dv->image, '', null) !!}
+                                </div>
+                                <div class="cate-content">
+                                    <h3 class="cate-title">
+                                        <a class="cate-title__link" href="{{ route('divisionsingle', $dv->slug) }}">
+                                            {{ $dv->name ?? '' }}
+                                        </a>
+                                    </h3>
+
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
+        </section>
+    @endif
 
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <div class="cate-style text-center">
-                        <div class="cate-figure">
-                            <img class="cate-img" src="{{ asset('frontend/assets/img/cate/try.png') }}" alt="cate image">
-                        </div>
-                        <div class="cate-content">
-                            <h3 class="cate-title">
-                                <a class="cate-title__link" href="#">UROLOGY</a>
-                            </h3>
-                            <span class="cate-num">
-                                <a class="cate-num__link" href="#">10 Products</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-auto">
-                    <div class="cate-style text-center">
-                        <div class="cate-figure">
-                            <img class="cate-img" src="{{ asset('frontend/assets/img/cate/hormones.png') }}"
-                                alt="cate image">
-                        </div>
-                        <div class="cate-content">
-                            <h3 class="cate-title">
-                                <a class="cate-title__link" href="#">HORMONES</a>
-                            </h3>
-                            <span class="cate-num">
-                                <a class="cate-num__link" href="#">15 Products</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-auto">
-                    <div class="cate-style text-center">
-                        <div class="cate-figure">
-                            <img class="cate-img" src="{{ asset('frontend/assets/img/cate/general.png') }}"
-                                alt="cate image">
-                        </div>
-                        <div class="cate-content">
-                            <h3 class="cate-title">
-                                <a class="cate-title__link" href="#">GENERAL</a>
-                            </h3>
-                            <span class="cate-num">
-                                <a class="cate-num__link" href="#">10 Products</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Category Area End -->
     <!-- About Area Start  -->
     <!-- About Area Start -->
     <section class="about-layout1 z-index-common space-extra-bottom">
+        <span class="sec-subtitle d-block text-center" style="margin-bottom: 30px;">
+            Welcome to OHM Pharmaceuticals
+        </span>
+
         <img class="about-ele1" src="{{ asset('frontend/assets/img/about/about-ele1-1.png') }}" alt="about element">
         <div class="container">
+
             <div class="row">
+
                 <div class="col-lg-6 mb-30">
-                    <div class="img-box1">
+                    <div class="img">
                         <div class="img1">
-                            <img class="img" src="{{ asset('frontend/assets/img/about/c-about-1-1.jpg') }}"
-                                alt="about 1 1">
-                        </div>
-                        <div class="video-thumb1">
-                            <img class="img" src="{{ asset('frontend/assets/img/about/about-1-2.jpg') }}"
-                                alt="about 2 2">
-                            <a class="play-btn style7 popup-video" href="https://www.youtube.com/watch?v=bJNLrJ7MUzM"
-                                tabindex="0">
-                                <i class="fas fa-play"></i>
-                            </a>
+                            <img class="img-fluid rounded" src="{{ asset(get_media_url($setting['homepage_image'])) }}"
+                                alt="About OPL">
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 mb-30">
                     <div class="about-content1">
                         <div class="title-area">
-                            <span class="sec-subtitle">Welcome to OHM Pharmaceuticals</span>
-                            <h2 class="sec-title">We Provide High Quality And Certified Products</h2>
+
+                            <h2 class="sec-title">{{ $settings['homepage_title'] }}</h2>
                         </div>
-                        <div class="about-body">
+                        <div class="about">
                             <p class="about-text">
-                                There are many variations of passages of Lorem Ipsum available, bhe mred aln ine form,
-                                by injected humour, or randomised words which don't look even slilievable. If you're going
-                                to
-                                use a passage of variations of passages
+                                {!! $setting['homepage_description'] ?? '' !!}
                             </p>
-                            <div class="list-style1">
-                                <ul>
-                                    <li>
-                                        <i><img src="{{ asset('frontend/assets/img/icons/shield.png') }}"
-                                                alt="shield"></i>
-                                        100% Tested
-                                    </li>
-                                    <li>
-                                        <i><img src="{{ asset('frontend/assets/img/icons/marijuana.png') }}"
-                                                alt="marijuana"></i>
-                                        Plant Based Ingredients
-                                    </li>
-                                    <li>
-                                        <i><img src="{{ asset('frontend/assets/img/icons/microscope.png') }}"
-                                                alt="microscope"></i>
-                                        Lab Tested
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
