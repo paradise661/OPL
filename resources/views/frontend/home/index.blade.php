@@ -240,7 +240,9 @@
         </div>
     </section> --}}
     @if ($setting['product'])
-        <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
+        <section class="space-top space-bottom trending-products-section"
+            data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
+
             <div class="container">
                 <div class="row">
 
