@@ -239,201 +239,64 @@
             </div>
         </div>
     </section> --}}
-    <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="title-area text-center">
-                        <div class="sec-icon">
-                            <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
-                        </div>
-                        <span class="sec-subtitle">Quality Products</span>
-                        <h2 class="sec-title">Trending Products</h2>
-                    </div>
-                </div>
-            </div>
+    @if ($setting['product'])
+        <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
+            <div class="container">
+                <div class="row">
 
-            <div class="row">
-                {{-- Product 1 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p1.jpeg') }}" alt="Product Image 1"></a>
-                            {{-- <a class="product-tag2" href="#">30% OFF</a> --}}
-                        </div>
-                        <div class="product-content">
-                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
-                            <h3 class="product-title"><a href="shop-details.html">Full Spectrum CBD Oil 1000 mg (10%)</a>
-                            </h3>
-                            {{-- <span class="product-cate">CBD 100MG</span> --}}
-                            {{-- <span class="product-price">$39.00</span> --}}
-
+                    <div class="col-lg-6 mx-auto">
+                        <div class="title-area text-center">
+                            <div class="sec-icon">
+                                <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
+                            </div>
+                            <span class="sec-subtitle">Quality Products</span>
+                            <h2 class="sec-title">Trending Products</h2>
                         </div>
                     </div>
                 </div>
 
-                {{-- Product 2 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p2.jpeg') }}" alt="Product Image 2"></a>
-                        </div>
-                        <div class="product-content">
-                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                <div class="row">
+                    @foreach ($setting['product'] as $pd)
+                        @php
+                            $prd = getProductByID($pd);
+                        @endphp
+                        {{-- Product 1 --}}
+                        <div class="col-lg-3 col-md-6">
+                            <div class="vs-product product-style1">
+                                <div class="product-img">
+                                    <a href="{{ route('productssingle', $prd->slug) }}">
+                                        {!! get_image($prd->image, '', 'home-product') !!}
+                                    </a>
+                                    {{-- <a class="product-tag2" href="#">30% OFF</a> --}}
+                                </div>
+                                <div class="product-content">
+                                    {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
                                     style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
-                            <h3 class="product-title"><a href="shop-details.html">CBD Gummies 500 mg</a></h3>
-                            {{-- <span class="product-cate">CBD Gummies</span>
-                            <span class="product-price">$29.00</span>
-                            <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">Add to Cart</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-                            </div> --}}
-                        </div>
-                    </div>
-                </div>
+                                    <h3 class="product-title"><a href="{{ route('productssingle', $prd->slug) }}">
+                                            {{ $prd->name ?? '' }}
+                                        </a>
+                                        <span class="product-cate">{{ $prd->category[0]->name ?? '' }}</span>
 
-                {{-- Product 3 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p3.jpeg') }}" alt="Product Image 3"></a>
-                            {{-- <a class="product-tag2" href="#">Out of Stock</a> --}}
-                        </div>
-                        <div class="product-content">
-                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
-                            <h3 class="product-title"><a href="shop-details.html">CBD Balm 300 mg</a></h3>
-                            {{-- <span class="product-cate">CBD Balm</span>
-                            <span class="product-price">$25.00</span> --}}
-                            {{-- <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">View More</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-                            </div> --}}
-                        </div>
-                    </div>
-                </div>
+                                    </h3>
+                                    {{-- <span class="product-cate">CBD 100MG</span> --}}
+                                    {{-- <span class="product-price">$39.00</span> --}}
 
-                {{-- Product 4 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p4.jpeg') }}" alt="Product Image 4"></a>
-                        </div>
-                        <div class="product-content">
-                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
-                            <h3 class="product-title"><a href="shop-details.html">CBD Capsules 750 mg</a></h3>
-                            <span class="product-cate">CBD Capsules</span>
-                            <span class="product-price">$45.00</span>
-                            <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">Add to Cart</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
 
-                {{-- Product 5 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p5.jpeg') }}" alt="Product Image 5"></a>
-                            <a class="product-tag2" href="#">Out of Stock</a>
-                        </div>
-                        <div class="product-content">
-                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
-                            <h3 class="product-title"><a href="shop-details.html">CBD Bath Bombs</a></h3>
-                            <span class="product-cate">CBD Bath</span>
-                            <span class="product-price">$15.00</span>
-                            <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">Add to Cart</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Product 6 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p6.jpeg') }}" alt="Product Image 6"></a>
-                        </div>
-                        <div class="product-content">
-                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
-                            <h3 class="product-title"><a href="shop-details.html">CBD Sleep Aid</a></h3>
-                            <span class="product-cate">CBD Sleep</span>
-                            <span class="product-price">$33.00</span>
-                            <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">Add to Cart</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Product 7 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p7.jpeg') }}" alt="Product Image 7"></a>
-                            <a class="product-tag2" href="#">Out of Stock</a>
-                        </div>
-                        <div class="product-content">
-                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
-                            <h3 class="product-title"><a href="shop-details.html">CBD Tincture Drops</a></h3>
-                            <span class="product-cate">CBD Tincture</span>
-                            <span class="product-price">$28.00</span>
-                            <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">Add to Cart</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Product 8 --}}
-                <div class="col-lg-3 col-md-6">
-                    <div class="vs-product product-style1">
-                        <div class="product-img">
-                            <a href="#"><img class="img w-100"
-                                    src="{{ asset('frontend/assets/img/products/p8.jpeg') }}" alt="Product Image 8"></a>
-                        </div>
-                        <div class="product-content">
-                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
-                            <h3 class="product-title"><a href="shop-details.html">CBD Pain Relief Cream</a></h3>
-                            <span class="product-cate">CBD Cream</span>
-                            <span class="product-price">$35.00</span>
-                            {{-- <div class="product-actions">
-                                <a class="vs-btn" href="cart.html">Add to Cart</a>
-                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-                            </div> --}}
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="d-inline-flex pt-30">
+                            <a class="vs-btn style2" href="/products">View All Products</a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <div class="d-inline-flex pt-30">
-                        <a class="vs-btn style2" href="products-grid.html">View All Products</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     <!-- Products Area End -->
     <!-- Features Area -->
@@ -614,7 +477,7 @@
 
     <!-- Banner Area End -->
     <!-- Brand Area -->
-    <div class="brand-layout1" data-bg-src="{{ asset('frontend/assets/img/bg/b-1-2.png') }}">
+    {{-- <div class="brand-layout1" data-bg-src="{{ asset('frontend/assets/img/bg/b-1-2.png') }}">
         <div class="container">
             <div class="row">
                 <div class="col mx-auto text-center">
@@ -675,329 +538,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Brand Area End -->
-    <!-- Top Selling Product -->
-    <section class="product-layout2 z-index-common" data-bg-src="{{ asset('frontend/assets/img/bg/b-1-3.jpg') }}">
-        <img class="ele1" src="{{ asset('frontend/assets/img/products/product-leaf-1-1.png') }}" alt="product">
-        <img class="ele2" src="{{ asset('frontend/assets/img/products/product-leaf-1-2.png') }}" alt="product">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="title-area text-center">
-                        <span class="sec-subtitle">Trending Products</span>
-                        <h2 class="sec-title text-white">Top Selling Products</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="product-carousel vs-carousel row" data-slide-show="1" data-dots="true" data-xl-dots="true"
-                data-ml-dots="true" data-lg-dots="true" data-md-dots="true">
-                <div class="col">
-                    <div class="vs-product product-style2">
-                        <div class="row gx-60 align-items-center">
-                            <div class="col-lg-4 mb-30">
-                                <p class="product-text">100% cannabis products</p>
-                                <h3 class="product-title">CBD Gummies (300mg)</h3>
-                                <div class="star-rating" role="img" aria-label="Rated 5 out of 5">
-                                    <span style="width:100%">Rated <strong class="rating">5</strong> out of 5</span>
-                                </div>
-                                <span class="product-price"><del>$30.00</del>$66.00</span>
-                                <span class="product-tax">Tax included.</span>
-                                <span class="counter-title">Limited Time Offer:</span>
-                                <div class="counter-style">
-                                    <ul class="offer-counter" data-offer-date="12/12/2024">
-                                        <li>
-                                            <div class="day count-number">00</div><span class="count-name">Days</span>
-                                        </li>
-                                        <li>
-                                            <div class="hour count-number">00</div><span class="count-name">Hours</span>
-                                        </li>
-                                        <li>
-                                            <div class="minute count-number">00</div><span
-                                                class="count-name">Minutes</span>
-                                        </li>
-                                        <li>
-                                            <div class="seconds count-number">00</div><span
-                                                class="count-name">Seconds</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-30">
-                                <div class="product-image">
-                                    <img src="{{ asset('frontend/assets/img/products/p-l-2-1-1.png') }}"
-                                        alt="product layout 2">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-30">
-                                <div class="buying-options">
-                                    <h4 class="buying-title">Buying Options</h4>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault1" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Single Purchase
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault2" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Every Week
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault3" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            Every Two Weeks
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault4" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault4">
-                                            Every Four Weeks
-                                        </label>
-                                    </div>
-                                    <a class="vs-btn style3" href="products-grid.html" tabindex="0">
-                                        Add to Cart<i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="vs-product product-style2">
-                        <div class="row gx-60 align-items-center">
-                            <div class="col-lg-4 mb-30">
-                                <p class="product-text">100% products</p>
-                                <h3 class="product-title">Full Spectrum CBD Oil 1000 mg (10%)</h3>
-                                <div class="star-rating" role="img" aria-label="Rated 5 out of 5">
-                                    <span style="width:100%">Rated <strong class="rating">5</strong> out of 5</span>
-                                </div>
-                                <span class="product-price"><del>$99.00</del>$100.00</span>
-                                <span class="product-tax">Tax included.</span>
-                                <span class="counter-title">Limited Time Offer:</span>
-                                <div class="counter-style">
-                                    <ul class="offer-counter" data-offer-date="10/12/2025">
-                                        <li>
-                                            <div class="day count-number">00</div><span class="count-name">Days</span>
-                                        </li>
-                                        <li>
-                                            <div class="hour count-number">00</div><span class="count-name">Hours</span>
-                                        </li>
-                                        <li>
-                                            <div class="minute count-number">00</div><span
-                                                class="count-name">Minutes</span>
-                                        </li>
-                                        <li>
-                                            <div class="seconds count-number">00</div><span
-                                                class="count-name">Seconds</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-30">
-                                <div class="product-image">
-                                    <img src="{{ asset('frontend/assets/img/products/p-l-2-1-1.png') }}"
-                                        alt="product layout 2">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-30">
-                                <div class="buying-options">
-                                    <h4 class="buying-title">Buying Option</h4>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault_fe807714" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault_fe807714">
-                                            Single Purchase
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault_449dfee6" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault_449dfee6">
-                                            Every Week
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault_3eafcc5d" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault_3eafcc5d">
-                                            Every Two Weeks
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexRadioDefault_5f3aa960" type="radio"
-                                            name="flexRadioDefault">
-                                        <label class="form-check-label" for="flexRadioDefault_5f3aa960">
-                                            Every Four Weeks
-                                        </label>
-                                    </div>
-                                    <a class="vs-btn style3" href="products-grid.html" tabindex="0">
-                                        Add to Cart<i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-features">
-                <div class="row justify-content-between">
-                    <div class="col-lg-auto col-md-6 mb-30">
-                        <div class="item-style">
-                            <div class="item-icon">
-                                <img src="{{ asset('frontend/assets/img/icons/product-feature-1-1.png') }}"
-                                    alt="product feature 1 1">
-                            </div>
-                            <h3 class="item-title">
-                                Free Next Day
-                                Delivery Over $500
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-auto col-md-6 mb-30">
-                        <div class="item-style">
-                            <div class="item-icon">
-                                <img src="{{ asset('frontend/assets/img/icons/product-feature-1-2.png') }}"
-                                    alt="product feature 1 1">
-                            </div>
-                            <h3 class="item-title">
-                                24/7 Customer Support
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-auto col-md-6 mb-30">
-                        <div class="item-style">
-                            <div class="item-icon">
-                                <img src="{{ asset('frontend/assets/img/icons/product-feature-1-3.png') }}"
-                                    alt="product feature 1 1">
-                            </div>
-                            <h3 class="item-title">
-                                100% Secured Checkout
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-auto col-md-6 mb-30">
-                        <div class="item-style">
-                            <div class="item-icon">
-                                <img src="{{ asset('frontend/assets/img/icons/product-feature-1-4.png') }}"
-                                    alt="product feature 1 1">
-                            </div>
-                            <h3 class="item-title">
-                                30 Days Free Return
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Top Selling Product End -->
-    <!-- Testimonials Area Start -->
-    {{-- <section class="testimonials space-top space-bottom">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-7">
-                    <div class="title-area">
-                        <span class="sec-subtitle">TESTIMONIALS</span>
-                        <h2 class="sec-title">What Our Customer Say</h2>
-                    </div>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <div class="sec-btns">
-                        <button class="vs-btn style4" data-slick-prev="#testislide1"><i
-                                class="far fa-arrow-left"></i></button>
-                        <button class="vs-btn style4" data-slick-next="#testislide1"><i
-                                class="far fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="row vs-carousel" id="testislide1" data-slide-show="2">
-                <div class="col-auto">
-                    <div class="testi-style1">
-                        <div class="star-rating" role="img" aria-label="Rated 5 out of 5">
-                            <span style="width:100%">Rated <strong class="rating">5</strong> out of 5</span>
-                        </div>
-                        <span class="testi-author">By <a href="#">Shrayash Dotel</a></span>
-                        <h3 class="testi-title">Best Protein i have Ever</h3>
-                        <div class="testi-content">
-                            <div class="testi-image">
-                                <img class="img1" src="{{ asset('frontend/assets/img/testimonials/testi-1-1.png') }}"
-                                    alt="testimonials">
-                                <i class="testi-icon">
-                                    <img src="{{ asset('frontend/assets/img/icons/testimonials-quote-icon-1.png') }}"
-                                        alt="testimonials icon">
-                                </i>
-                            </div>
-                            <p class="testi-text">I've been taking now for 2 years.
-                                Searched lots of sites and was absolutely
-                                blown away by the reviews of Cannaray oil.
-                                The information and range of high-quality
-                                products were amazing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="testi-style1">
-                        <div class="star-rating" role="img" aria-label="Rated 5 out of 5">
-                            <span style="width:100%">Rated <strong class="rating">5</strong> out of 5</span>
-                        </div>
-                        <span class="testi-author">By <a href="#">Shrayash Dotel</a></span>
-                        <h3 class="testi-title">Best-Tasting Food Ever</h3>
-                        <div class="testi-content">
-                            <div class="testi-image">
-                                <img class="img1" src="{{ asset('frontend/assets/img/testimonials/testi-1-2.png') }}"
-                                    alt="testimonials">
-                                <i class="testi-icon">
-                                    <img src="{{ asset('frontend/assets/img/icons/testimonials-quote-icon-1.png') }}"
-                                        alt="testimonials icon">
-                                </i>
-                            </div>
-                            <p class="testi-text">I've been taking oil now for 2 years.
-                                Searched lots of sites and was absolutely
-                                blown away by the reviews of Cannaray oil.
-                                The information and range of high-quality
-                                products were amazing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="testi-style1">
-                        <div class="star-rating" role="img" aria-label="Rated 5 out of 5">
-                            <span style="width:100%">Rated <strong class="rating">5</strong> out of 5</span>
-                        </div>
-                        <span class="testi-author">By <a href="#">Shrayash Dotel</a></span>
-                        <h3 class="testi-title">Best Protein i have Ever</h3>
-                        <div class="testi-content">
-                            <div class="testi-image">
-                                <img class="img1" src="{{ asset('frontend/assets/img/testimonials/testi-1-3.png') }}"
-                                    alt="testimonials">
-                                <i class="testi-icon">
-                                    <img src="{{ asset('frontend/assets/img/icons/testimonials-quote-icon-1.png') }}"
-                                        alt="testimonials icon">
-                                </i>
-                            </div>
-                            <p class="testi-text">I've been taking oil now for 2 years.
-                                Searched lots of sites and was absolutely
-                                blown away by the reviews of Cannaray oil.
-                                The information and range of high-quality
-                                products were amazing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Testimonials Area End -->
 
     <!-- Blog Area Start -->
     @if ($blogs->isNotEmpty())
