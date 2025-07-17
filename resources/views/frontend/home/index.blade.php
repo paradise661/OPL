@@ -176,7 +176,7 @@
     <!-- Review Area End -->
 
     <!-- Products Area -->
-    <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
+    {{-- <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
@@ -228,6 +228,201 @@
                         </div>
                     </div>
                 @endfor
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="d-inline-flex pt-30">
+                        <a class="vs-btn style2" href="products-grid.html">View All Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+    <section class="space-top space-bottom" data-bg-src="{{ asset('frontend/assets/img/bg/b.png') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="title-area text-center">
+                        <div class="sec-icon">
+                            <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
+                        </div>
+                        <span class="sec-subtitle">Quality Products</span>
+                        <h2 class="sec-title">Trending Products</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {{-- Product 1 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p1.jpeg') }}" alt="Product Image 1"></a>
+                            {{-- <a class="product-tag2" href="#">30% OFF</a> --}}
+                        </div>
+                        <div class="product-content">
+                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
+                            <h3 class="product-title"><a href="shop-details.html">Full Spectrum CBD Oil 1000 mg (10%)</a>
+                            </h3>
+                            {{-- <span class="product-cate">CBD 100MG</span> --}}
+                            {{-- <span class="product-price">$39.00</span> --}}
+
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 2 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p2.jpeg') }}" alt="Product Image 2"></a>
+                        </div>
+                        <div class="product-content">
+                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
+                            <h3 class="product-title"><a href="shop-details.html">CBD Gummies 500 mg</a></h3>
+                            {{-- <span class="product-cate">CBD Gummies</span>
+                            <span class="product-price">$29.00</span>
+                            <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">Add to Cart</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 3 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p3.jpeg') }}" alt="Product Image 3"></a>
+                            {{-- <a class="product-tag2" href="#">Out of Stock</a> --}}
+                        </div>
+                        <div class="product-content">
+                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
+                            <h3 class="product-title"><a href="shop-details.html">CBD Balm 300 mg</a></h3>
+                            {{-- <span class="product-cate">CBD Balm</span>
+                            <span class="product-price">$25.00</span> --}}
+                            {{-- <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">View More</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 4 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p4.jpeg') }}" alt="Product Image 4"></a>
+                        </div>
+                        <div class="product-content">
+                            {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
+                            <h3 class="product-title"><a href="shop-details.html">CBD Capsules 750 mg</a></h3>
+                            <span class="product-cate">CBD Capsules</span>
+                            <span class="product-price">$45.00</span>
+                            <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">Add to Cart</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 5 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p5.jpeg') }}" alt="Product Image 5"></a>
+                            <a class="product-tag2" href="#">Out of Stock</a>
+                        </div>
+                        <div class="product-content">
+                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
+                            <h3 class="product-title"><a href="shop-details.html">CBD Bath Bombs</a></h3>
+                            <span class="product-cate">CBD Bath</span>
+                            <span class="product-price">$15.00</span>
+                            <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">Add to Cart</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 6 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p6.jpeg') }}" alt="Product Image 6"></a>
+                        </div>
+                        <div class="product-content">
+                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
+                            <h3 class="product-title"><a href="shop-details.html">CBD Sleep Aid</a></h3>
+                            <span class="product-cate">CBD Sleep</span>
+                            <span class="product-price">$33.00</span>
+                            <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">Add to Cart</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 7 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p7.jpeg') }}" alt="Product Image 7"></a>
+                            <a class="product-tag2" href="#">Out of Stock</a>
+                        </div>
+                        <div class="product-content">
+                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
+                            <h3 class="product-title"><a href="shop-details.html">CBD Tincture Drops</a></h3>
+                            <span class="product-cate">CBD Tincture</span>
+                            <span class="product-price">$28.00</span>
+                            <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">Add to Cart</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Product 8 --}}
+                <div class="col-lg-3 col-md-6">
+                    <div class="vs-product product-style1">
+                        <div class="product-img">
+                            <a href="#"><img class="img w-100"
+                                    src="{{ asset('frontend/assets/img/products/p8.jpeg') }}" alt="Product Image 8"></a>
+                        </div>
+                        <div class="product-content">
+                            <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div>
+                            <h3 class="product-title"><a href="shop-details.html">CBD Pain Relief Cream</a></h3>
+                            <span class="product-cate">CBD Cream</span>
+                            <span class="product-price">$35.00</span>
+                            {{-- <div class="product-actions">
+                                <a class="vs-btn" href="cart.html">Add to Cart</a>
+                                <a class="cart-btn" href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row justify-content-center">
