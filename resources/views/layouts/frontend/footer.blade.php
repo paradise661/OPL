@@ -7,17 +7,25 @@
                     <div class="widget footer-widget">
                         <div class="vs-widget-about">
                             <div class="footer-logo">
-                                <a href="#"><img class="logo" src="frontend/assets/img/logoo.jpg"
-                                        alt="Cannabo"></a>
+                                <a class="logo" href="/">
+                                    <img src="{{ $setting['site_footer_logo'] ? asset(get_media($setting['site_footer_logo'])->fullurl) : '' }}"
+                                        alt="{{ $setting['site_footer_logo'] ? get_media($setting['site_footer_logo'])->alt : '' }}"
+                                        width="100px" height="90px">
+                                </a>
                             </div>
                             <p class="footer-text">Aliquet eget sit amet tellus cras adipiscing
                                 enim eu turpis. Hac habitasse platea dictu
                                 mst quisque.</p>
-                            <div class="footer-social pt-xl-4">
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            @if ($socialdata->isNotEmpty())
+                                <div class="footer-social pt-xl-4">
+                                    @foreach ($socialdata as $data)
+                                        <a href="{{ $data->link ?? '#' }}" target="_blank">
+                                            <i class="{{ $data->icon ?? 'fab fa-globe' }}"></i>
+                                        </a>
+                                    @endforeach
+                                </div>
+                            @endif
+
                         </div>
                     </div>
                 </div>

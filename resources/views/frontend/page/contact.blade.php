@@ -42,8 +42,7 @@
                              <div class="contact-box__icon"><i class="far fa-location"></i></div>
                              <div class="media-body">
                                  <p class="contact-box__info">
-                                     New Town Western King Street,
-                                     5th Avenue, New York
+                                     {{ $setting['site_location'] ?? '' }}
                                  </p>
                              </div>
                          </div>
@@ -75,14 +74,21 @@
                                  </p>
                              </div>
                          </div> --}}
-                         <div class="social-links pt-10">
-                             <span class="links-title">Social Networking:</span>
-                             <ul>
-                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                             </ul>
-                         </div>
+                         @if ($socialdata->isNotEmpty())
+                             <div class="social-links pt-10">
+                                 <span class="links-title">Social Networking:</span>
+                                 <ul>
+                                     @foreach ($socialdata as $data)
+                                         <li>
+                                             <a href="{{ $data->link ?? '' }}" target="_blank">
+                                                 <i class="{{ $data->icon ?? '' }}"></i>
+                                             </a>
+                                         </li>
+                                     @endforeach
+                                 </ul>
+                             </div>
+                         @endif
+
                      </div>
                      <div class="col-lg-7 form-style2">
                          <form class="ajax-contact" id="contact-form" action="{{ route('inquiry') }}" method="POST">

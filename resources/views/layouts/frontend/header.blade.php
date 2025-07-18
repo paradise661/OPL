@@ -10,13 +10,18 @@
                         <a href="tel:01-4110761">01-4110761</a>
                     </div>
                 </div>
-                <div class="col-lg-auto">
-                    <div class="header-social">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                @if ($socialdata->isNotEmpty())
+                    <div class="col-lg-auto">
+                        <div class="header-social">
+                            @foreach ($socialdata as $data)
+                                <a href="{{ $data->link ?? '#' }}" target="_blank">
+                                    <i class="{{ $data->icon ?? 'fab fa-globe' }}"></i>
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
-                </div>
+                @endif
+
                 <div class="col-lg-auto d-none d-xl-block">
                     <!-- You can remove this block if it's now duplicated -->
                 </div>
@@ -40,7 +45,7 @@
                         <nav class="main-menu d-none d-lg-block">
                             <ul>
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
 
                                 </li>
                                 <li class="menu-item-has-children">
@@ -133,7 +138,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="/contact-us">Contact</a>
                                 </li>
                             </ul>
                         </nav>
