@@ -1,29 +1,26 @@
 @extends('layouts.frontend.master')
-@section('seo')
 
 @section('content')
-    <div class="error-wrapper pt-100">
+    <section class="z-index-common breadcumb-wrapper">
+        <div class="hero-bg" data-bg-src="frontend/assets/img/bg/b-1-1.png"></div>
+        <div class="breadcumb-shape"></div>
+        {{-- <div class="hero-leaf3">
+            <img src="assets/img/hero/h-1-4.png" alt="hero leaf 3">
+        </div> --}}
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="error-content text-center">
-                        <div class="error-img">
-                            <div class="media-wrapper">
-                                <img class="w-100" src="{{ asset('frontend/img/404.jpg') }}" alt="404">
-                            </div>
-                        </div>
-                        <div class="error-text">
-                            <h1 class="h2 mb-2">Ooops! This Page Does Not Exist</h1>
-                            <p>We're sorry, but it appears the website address you entered was incorrect, or is temporarily
-                                unavailable.</p>
-                            <div class="error-btn">
-                                <a class="btn btn-outline-secondary my-3" href="/"> GO TO HOME <i
-                                        class="fa fa-arrow-right"></i></a>
-                            </div>
+            <div class="row min-vh-100 justify-content-center align-items-center text-center">
+                <div class="col-xl-6">
+                    <div class="error-content">
+                        <h1 class="sec-title">404</h1>
+                        <h2 class="sec-subtitle"><span>Ooops,</span> Page Not Found</h2>
+                        <p class="sec-text">We Can't Seem to find the page you're looking for.</p>
+                        <div class="d-inline-flex">
+                            <a class="vs-btn style2" href="/">Back to Home</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    </section>
 @endsection
