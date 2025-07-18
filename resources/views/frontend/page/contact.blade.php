@@ -25,7 +25,7 @@
                  <div class="col-lg-7 mx-auto">
                      <div class="title-area text-center">
                          <div class="sec-icon">
-                             <img src="frontend/assets/img/icons/s-1-1.png" alt="icon">
+                             <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
                          </div>
                          <h2 class="sec-title">We Are Here For You!</h2>
                          <p>If your query is relating to finding our more information about Our products then please
@@ -52,7 +52,7 @@
                              <div class="media-body">
                                  <h4 class="contact-box__label">Phone No:</h4>
                                  <p class="contact-box__info">
-                                     <a href="tel:+310259121563">1800-2355-2356</a>
+                                     <a href="{{ $setting['site_phone'] ?? '' }}">{{ $setting['site_phone'] ?? '' }}</a>
                                  </p>
                              </div>
                          </div>
@@ -61,11 +61,12 @@
                              <div class="media-body">
                                  <h4 class="contact-box__label">Email Address:</h4>
                                  <p class="contact-box__info">
-                                     <a href="tel:+310259121563">username@domainname.com</a>
+                                     <a
+                                         href="mailto:{{ $setting['site_email'] ?? '' }}">{{ $setting['site_email'] ?? '' }}</a>
                                  </p>
                              </div>
                          </div>
-                         <div class="contact-box__item">
+                         {{-- <div class="contact-box__item">
                              <div class="contact-box__icon"><i class="far fa-clock"></i></div>
                              <div class="media-body">
                                  <p class="contact-box__info">
@@ -73,7 +74,7 @@
                                      <span>Sat-Sun: Closed</span>
                                  </p>
                              </div>
-                         </div>
+                         </div> --}}
                          <div class="social-links pt-10">
                              <span class="links-title">Social Networking:</span>
                              <ul>
@@ -84,8 +85,7 @@
                          </div>
                      </div>
                      <div class="col-lg-7 form-style2">
-                         <form class="ajax-contact" action="https://html.vecurosoft.com/cannabo/demo/mail.php"
-                             method="POST">
+                         <form class="ajax-contact" id="contact-form" action="{{ route('inquiry') }}" method="POST">
                              @csrf
                              <h3 class="contact-box__title">Get in touch with us</h3>
                              <p class="contact-box__text">For all enquires, please contact us and one of our delightful team

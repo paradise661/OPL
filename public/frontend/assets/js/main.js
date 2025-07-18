@@ -431,17 +431,26 @@
             data: formData,
             type: "POST",
           })
-          .done(function (response) {
-            // Make sure that the formMessages div has the 'success' class.
-            formMessages.removeClass("error");
-            formMessages.addClass("success");
-            // Set the message text.
-            formMessages.text(response);
-            // Clear the form.
-            $(form + ' input:not([type="submit"]),' + form + " textarea").val(
-              ""
-            );
-          })
+         .done(function (response) {
+    // Remove error class and add success class
+    formMessages.removeClass("error").addClass("success");
+
+    // ✅ Show message immediately
+    if (typeof response === 'object' && response.success) {
+        formMessages.text(response.success).fadeIn();
+    } else {
+        formMessages.text("Form submitted successfully.").fadeIn();
+    }
+
+    // ✅ Hide the message after 5 seconds
+    setTimeout(function () {
+        formMessages.fadeOut();
+    }, 5000);
+
+    // ✅ Clear the form
+    $(form + ' input:not([type="submit"]),' + form + " textarea").val("");
+})
+
           .fail(function (data) {
             // Make sure that the formMessages div has the 'error' class.
             formMessages.removeClass("success");
