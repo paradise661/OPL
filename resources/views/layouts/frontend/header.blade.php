@@ -6,7 +6,7 @@
                 <div class="col-lg-auto flex-grow-1 d-none d-lg-block">
                     <div class="header-call">
                         <i><img src="frontend/assets/img/icons/customer-service.png" alt="customer-service"></i>
-                        <span>Need Help?</span>
+                        <span>Need Heelp?</span>
                         <a href="tel:01-4110761">01-4110761</a>
                     </div>
                 </div>
