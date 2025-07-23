@@ -51,10 +51,10 @@
                                 <li class="menu-item-has-children">
                                     <a href="/about-us">About Us</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Our Company</a></li>
-                                        <li><a href="#">Production</a></li>
-                                        <li><a href="#">Our Testimonials</a></li>
-                                        <li><a href="#">Out Team</a></li>
+                                        <li><a href="/company-profile">Our Company</a></li>
+                                        <li><a href="/production">Production</a></li>
+                                        {{-- <li><a href="#">Our Testimonials</a></li>
+                                        <li><a href="#">Out Team</a></li> --}}
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
