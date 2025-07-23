@@ -13290,6 +13290,9 @@ blockquote.vs-quote .quote-author {
   margin: 0 0 10px 0;
   padding: 5px 0;
 }
+.custom-bottom-space {
+  padding-bottom: 150px; /* or any value you prefer */
+}
 
 
 

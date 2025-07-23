@@ -49,7 +49,7 @@
 
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="about.html">About Us</a>
+                                    <a href="/about-us">About Us</a>
                                     <ul class="sub-menu">
                                         <li><a href="#">Our Company</a></li>
                                         <li><a href="#">Production</a></li>
