@@ -131,9 +131,9 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="products-grid.html">Gallery</a>
+                                    <a href="/gallery">Gallery</a>
                                     <ul class="sub-menu">
-                                        <li><a href="products-grid-sidebar.html">Videos</a></li>
+                                        <li><a href="/videos">Videos</a></li>
 
                                     </ul>
                                 </li>
