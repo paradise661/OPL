@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 @section('content')
-    <section class="z-index-common breadcumb-wrapper" data-bg-src="frontend/assets/img/bg/b-1-3.png">
+    <section class="z-index-common breadcumb-wrapper" data-bg-src="frontend/assets/img/bg/new.png">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
