@@ -73,11 +73,12 @@
 
                             </div>
 
-                        </div> <!-- End tab-pane -->
-                    </div> <!-- End tab-content -->
+                        </div>
+                    </div>
 
-                </div> <!-- End .row (sort-bar) -->
-            </div> <!-- End .vs-sort-bar -->
-            </div> <!-- End .container -->
+                </div>
+            </div>
+            </div>
         </section>
     @endif
+@endsection
