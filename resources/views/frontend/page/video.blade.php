@@ -6,11 +6,11 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
                     <div class="breadcumb-content">
-                        <h1 class="breadcumb-title">Gallery</h1>
+                        <h1 class="breadcumb-title">Video</h1>
                         <div class="breadcumb-menu-wrap">
                             <ul class="breadcumb-menu">
                                 <li><a href="/">Home</a></li>
-                                <li>Gallery</li>
+                                <li>Video</li>
                             </ul>
                         </div>
                     </div>
