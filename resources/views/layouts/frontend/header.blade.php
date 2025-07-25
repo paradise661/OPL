@@ -109,7 +109,7 @@
                                     </ul>
                                 </li> --}}
                                 <li>
-                                    <a href="products-grid.html">Department</a>
+                                    <a href="/departments">Department</a>
                                     {{-- <ul class="sub-menu">
                                         <li><a href="products-grid-sidebar.html">Product Grid Sidebar</a></li>
                                         <li><a href="products-list.html">Product List</a></li>
