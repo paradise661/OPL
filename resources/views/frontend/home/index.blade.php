@@ -32,13 +32,7 @@
                                     <div class="hero-img wow fadeInUp" data-wow-delay="0.4s">
                                         <img src="{{ get_image_url($slide->image, 'home-banner-slider') }}"
                                             alt="Slider Image">
-                                        {{-- <span class="circle"></span> --}}
-                                        {{-- <div class="hero-certificate">
-                                    <img src="{{ asset('frontend/assets/img/logos/roundd.png') }}" alt="logo">
-                                </div> --}}
-                                        {{-- <div class="hero-leaf">
-                                    <img src="{{ asset('frontend/assets/img/hero/h-1-2.png') }}" alt="">
-                                </div> --}}
+
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +94,7 @@
             Welcome to OHM Pharmaceuticals
         </span>
 
-        <img class="about-ele1" src="{{ asset('frontend/assets/img/about/about-ele1-1.png') }}" alt="about element">
+        {{-- <img class="about-ele1" src="{{ asset('frontend/assets/img/about/about-ele1-1.png') }}" alt="about element"> --}}
         <div class="container">
 
             <div class="row">
