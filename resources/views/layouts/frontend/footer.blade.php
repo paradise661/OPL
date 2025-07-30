@@ -15,7 +15,7 @@
                             </div>
                             <p class="footer-text">Aliquet eget sit amet tellus cras adipiscing
                                 enim eu turpis. Hac habitasse platea dictu
-                                mst quisque.</p>
+                                quisque.</p>
                             @if ($socialdata->isNotEmpty())
                                 <div class="footer-social pt-xl-4">
                                     @foreach ($socialdata as $data)
@@ -91,31 +91,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="newsletter-form">
-        <div class="container">
-            <form action="https://html.vecurosoft.com/cannabo/demo/mail.php">
-                <div class="row g-4 justify-content-center justify-content-lg-between align-items-center">
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="title-area">
-                            <div class="title-icon">
-                                <img src="frontend/assets/img/icons/plane-icon.png" alt="plan-icon">
-                            </div>
-                            <div class="title-content">
-                                <h2 class="sec-title">Subscribe Newsletter</h2>
-                                <p class="sec-text">Delivered to your inbox along with special discounts</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <div class="form-group mb-0">
-                            <input class="form-control" type="email" placeholder="Enter Your Email">
-                            <button class="vs-btn style4">Subscribe Now</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div> --}}
+
     <div class="copyright-wrap">
         <div class="container">
             <div class="row g-3 justify-content-center justify-content-xxl-between align-items-center">
@@ -124,11 +100,7 @@
                             2025</a> . All
                         rights reserved. <a href="https://paradiseit.com.np/">ParadiseIT</a></p>
                 </div>
-                {{-- <div class="col-lg-auto">
-                    <div class="footer-payment">
-                        <img src="frontend/assets/img/others/payment.png" alt="payment">
-                    </div>
-                </div> --}}
+
                 <div class="col-lg-auto">
                     <div class="widget widget_nav_menu footer-widget">
                         <div class="menu-all-pages-container">
