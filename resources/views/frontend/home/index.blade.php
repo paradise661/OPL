@@ -319,7 +319,7 @@
 
                                     <div class="feature-icon">
                                         <img src="{{ asset('frontend/assets/img/icons/feature-1-1.png') }}"
-                                            alt="feature icon 1">
+                                            alt="feature icon">
                                     </div>
                                 </div>
                                 <h3 class="feature-title">
