@@ -399,10 +399,10 @@
                 </div>
                 <div class="col-lg-6 mx-auto">
                     <div class="img-box2">
-                        {{-- <div class="img-circle"
-                            data-bg-src="{{ asset('frontend/assets/img/features/feature-1-2.png') }}"></div> --}}
-                        <img src="{{ asset('frontend/assets/img/features/ffff.png') }}" alt="feature image"
-                            style="margin-left: 120px;">
+
+                        <img class="ms-lg-5 ms-3" src="{{ asset('frontend/assets/img/features/ffff.png') }}"
+                            alt="feature image">
+
                     </div>
                 </div>
             </div>
