@@ -523,7 +523,7 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-center" style="padding: 50px;">
+                <div class="row justify-content-center" style="padding: 80px;">
                     <div class="col-auto">
                         <div class="d-inline-flex pt-30">
                             <a class="vs-btn style2" href="/blogs">View All Blog</a>
