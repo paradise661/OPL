@@ -70,7 +70,7 @@
 
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="products-grid.html">Blogs</a>
+                                    <a href="/blogs">Blogs</a>
                                     <ul class="sub-menu">
                                         <li><a href="products-grid-sidebar.html">Ohm Bytes</a></li>
                                         <li><a href="products-list.html">Ohm Insights</a></li>
