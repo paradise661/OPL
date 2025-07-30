@@ -1,5 +1,5 @@
 <section class="footer-layout1 z-index-common" data-bg-src="public/frontend/assets/img/bg/footer-bg-1-1.png">
-    <img class="footer-ele1" src="public/frontend/assets/img/footer/falling-leaves.png" alt="">
+    {{-- <img class="footer-ele1" src="public/frontend/assets/img/footer/falling-leaves.png" alt=""> --}}
     <div class="widget-area">
         <div class="container">
             <div class="row gy-5">
