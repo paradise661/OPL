@@ -13297,11 +13297,16 @@ blockquote.vs-quote .quote-author {
 .custom-bottom-space {
   padding-bottom: 150px; /* or any value you prefer */
 }
+.custom-bottom-space1 {
+  padding-bottom: 350px; /* or any value you prefer */
+}
 
 
 .custom-py-5px {
     padding-top: 25px;
     padding-bottom: 150px;
 }
+
+
 
 /*# sourceMappingURL=style.css.map */

@@ -77,13 +77,11 @@
                         <h3 class="widget_title">Useful Links</h3>
                         <div class="footer-menu--style">
                             <ul>
-                                <li><a href="#">Our Process</a></li>
-                                <li><a href="#">Payments</a></li>
-                                <li><a href="#">Special Offers</a></li>
-                                <li><a href="#">Shipping</a></li>
-                                <li><a href="#">Regulations</a></li>
-                                <li><a href="#">Product Returns</a></li>
-                                <li><a href="#">About Us</a></li>
+                                <li><a href="/contact-us">Contact Us</a></li>
+                                <li><a href="/products">Products</a></li>
+                                <li><a href="/blogs">Blogs</a></li>
+                                <li><a href="/company-profile">Company Profile</a></li>
+                                <li><a href="/about-us">About Us</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Our Team</a></li>
                             </ul>

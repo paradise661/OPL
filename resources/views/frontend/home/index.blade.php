@@ -147,26 +147,19 @@
                             <div class="review-content">
                                 <div class="review-content__left">
                                     <div class="review-logo">
-                                        <img src="{{ asset('frontend/assets/img/logos/l-1-2.png') }}" alt="logo">
+                                        <img src="{{ asset('frontend/assets/img/logoo.jpg') }}" alt="logo">
                                     </div>
                                 </div>
-                                <div class="review-content__right">
-                                    <h2 class="review-title h3">No.1 ABCD Specialist</h2>
+                                <div class="review-content__center">
+                                    <h2 class="review-title h3">Ohm Pharmaceuticals Lab Pvt. Ltd. (OPL)</h2>
                                     <p class="review-text">
-                                        ABC oils, joint & muscle rubs, skin care & cosmetics, edibles, drinks,
-                                        e-, & isolates, vapes & more…
+                                        Nepal’s leading pharmaceutical companies, driven by our core philosophy: "Passion to
+                                        Excellence."
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto text-center text-lg-end">
-                            <span class="review-subtitle">Rated 4.9 / 5</span>
-                            <img class="review-star" src="{{ asset('frontend/assets/img/others/ot-1-1.png') }}"
-                                alt="review star">
-                            <p class="review-subtitle2">Based on 848 reviews</p>
-                            <img class="review-trust" src="{{ asset('frontend/assets/img/logos/l-1-3.png') }}"
-                                alt="review logo">
-                        </div>
+
                     </div>
                 </div>
                 <img class="shape-1" src="{{ asset('frontend/assets/img/shapes/s-1-1.png') }}" alt="shape">
@@ -329,9 +322,7 @@
                         <div class="col-md-6">
                             <div class="feature-item">
                                 <div class="feature-header">
-                                    {{-- <img class="feature-icon-bg"
-                                        src="{{ asset('frontend/assets/img/features/feature-1-1.png') }}"
-                                        alt="feature icon"> --}}
+
                                     <div class="feature-icon">
                                         <img src="{{ asset('frontend/assets/img/icons/feature-1-1.png') }}"
                                             alt="feature icon 1">
@@ -339,11 +330,11 @@
                                 </div>
                                 <h3 class="feature-title">
                                     <a href="about.html">
-                                        Direct From Our Farm
+                                        WHO-GMP Certified
                                     </a>
                                 </h3>
                                 <p class="feature-text">
-                                    Sed perspiciatis is tus error voluptatem
+                                    First in Nepal for hormonal drugs, ensuring top-tier quality.
                                 </p>
                             </div>
                         </div>
@@ -360,11 +351,11 @@
                                 </div>
                                 <h3 class="feature-title">
                                     <a href="about.html">
-                                        Soil Association Certified
+                                        Advanced Facilities
                                     </a>
                                 </h3>
                                 <p class="feature-text">
-                                    Sed ut perspiciatis unde omnis is tus error sit voluptatem
+                                    Global standards (USFDA, MHRA, TGA) with modern technology.
                                 </p>
                             </div>
                         </div>
@@ -381,11 +372,11 @@
                                 </div>
                                 <h3 class="feature-title">
                                     <a href="about.html">
-                                        Broad Spectrum Extract
+                                        Innovation & R&D
                                     </a>
                                 </h3>
                                 <p class="feature-text">
-                                    Sed ut perspiciatis is tus error sit voluptatem
+                                    Focus on new molecules and improved formulations.
                                 </p>
                             </div>
                         </div>
@@ -402,11 +393,11 @@
                                 </div>
                                 <h3 class="feature-title">
                                     <a href="about.html">
-                                        3rd Party Testing
+                                        Affordable Quality
                                     </a>
                                 </h3>
                                 <p class="feature-text">
-                                    Sed ut perspiciatis omnis is tus error sit voluptatem
+                                    High-quality care accessible to every Nepali household.
                                 </p>
                             </div>
                         </div>
@@ -414,70 +405,17 @@
                 </div>
                 <div class="col-lg-6 mx-auto">
                     <div class="img-box2">
-                        <div class="img-circle"
-                            data-bg-src="{{ asset('frontend/assets/img/features/feature-1-2.png') }}"></div>
-                        <img src="{{ asset('frontend/assets/img/features/feature-1-3.png') }}" alt="feature image">
+                        {{-- <div class="img-circle"
+                            data-bg-src="{{ asset('frontend/assets/img/features/feature-1-2.png') }}"></div> --}}
+                        <img src="{{ asset('frontend/assets/img/features/ffff.png') }}" alt="feature image"
+                            style="margin-left: 120px;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Features Area End -->
-    <!-- Banner Area -->
-    <div class="space-extra-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="banner-style">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
-                                <div class="banner-content">
-                                    <h3 class="banner-title">
-                                        <a href="#">Skincare & Topicals</a>
-                                    </h3>
-                                    <p class="banner-text">Sed ut perspiciatis unde
-                                        is tus error sit voluptatem</p>
-                                    <a class="banner-link" href="#">
-                                        View More
-                                        <img src="{{ asset('frontend/assets/img/icons/arrow-icon-1-1.png') }}"
-                                            alt="arrow icon">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-img">
-                            <img src="{{ asset('frontend/assets/img/banner/banner-1-1.png') }}" alt="banner-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="banner-style style2">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
-                                <div class="banner-content">
-                                    <h3 class="banner-title">
-                                        <a href="about.html">Edibles & Drinks</a>
-                                    </h3>
-                                    <p class="banner-text">Sed ut perspiciatis unde omnis
-                                        is tus sit voluptatem</p>
-                                    <a class="banner-link" href="#">
-                                        View More
-                                        <img src="{{ asset('frontend/assets/img/icons/arrow-icon-1-1.png') }}"
-                                            alt="arrow icon">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-img">
-                            <img src="{{ asset('frontend/assets/img/banner/banner-1-2.png') }}" alt="banner-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Banner Area End -->
     <!-- Brand Area -->
     {{-- <div class="brand-layout1" data-bg-src="{{ asset('frontend/assets/img/bg/b-1-2.png') }}">
         <div class="container">
@@ -552,7 +490,7 @@
                     <div class="col-lg-8 mx-auto">
                         <div class="title-area text-center">
                             <div class="sec-icon">
-                                <img src="{{ asset('frontend/assets/img/icons/s-1-1.png') }}" alt="icon">
+                                <img src="{{ asset('frontend/assets/img/icons/iconn.png') }}" alt="icon">
                             </div>
                             <span class="sec-subtitle">{{ $setting['blog_title'] ?? '' }}</span>
                             <h2 class="sec-title">{{ $setting['blog_description'] ?? '' }}</h2>

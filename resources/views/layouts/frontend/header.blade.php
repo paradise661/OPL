@@ -35,8 +35,8 @@
                 <div class="row justify-content-between align-items-center gx-sm-0">
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="index.html">
-                                <img class="logo" src="frontend/assets/img/logoo.jpg" alt="Cannabo"
+                            <a href="/">
+                                <img class="logo" src="frontend/assets/img/logoo.jpg" alt="OPL"
                                     style="height: 50px; width: auto;">
                             </a>
                         </div>
@@ -58,10 +58,10 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="services.html">Product</a>
+                                    <a href="/product-category">Product</a>
                                     <ul class="sub-menu">
-                                        <li><a href="services.html">All Products</a></li>
-                                        <li><a href="service-details.html">Division</a></li>
+                                        <li><a href="/products">All Products</a></li>
+                                        {{-- <li><a href="service-details.html">Division</a></li> --}}
                                     </ul>
                                 </li>
 
