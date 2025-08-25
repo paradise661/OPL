@@ -63,9 +63,10 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="vs-product product-style1">
                                 <div class="product-img">
-                                    <a href="{{ route('productssingle', $packs->slug) }}">
+                                    <a href="{{ route('productcategorysingle', $packs->slug) }}">
                                         {!! get_image($packs->image) !!}
                                     </a>
+
                                     {{-- <a class="product-tag2" href="#">30% OFF</a> --}}
                                 </div>
                                 <div class="product-content" style="margin-bottom: 10px;">

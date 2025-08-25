@@ -121,9 +121,10 @@
                         </div>
                     </div>
                     <div class="d-flex wow fadeInUp" data-wow-delay="0.8s">
-                        <a class="vs-btn style1" href="{{ $slide->link ?? '#' }}">
+                        <a class="vs-btn style1" href="{{ url('/about-us') }}">
                             About Us <i class="fas fa-long-arrow-right"></i>
                         </a>
+
                     </div>
                 </div>
             </div>
