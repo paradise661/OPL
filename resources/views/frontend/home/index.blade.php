@@ -339,9 +339,9 @@
                                     </div>
                                 </div>
                                 <h3 class="feature-title">
-                                    <a href="about.html">
-                                        WHO-GMP Certified
-                                    </a>
+
+                                    WHO-GMP Certified
+
                                 </h3>
                                 <p class="feature-text">
                                     First in Nepal for hormonal drugs, ensuring top-tier quality.
@@ -360,9 +360,9 @@
                                     </div>
                                 </div>
                                 <h3 class="feature-title">
-                                    <a href="about.html">
-                                        Advanced Facilities
-                                    </a>
+
+                                    Advanced Facilities
+
                                 </h3>
                                 <p class="feature-text">
                                     Global standards (USFDA, MHRA, TGA) with modern technology.
@@ -381,9 +381,9 @@
                                     </div>
                                 </div>
                                 <h3 class="feature-title">
-                                    <a href="about.html">
-                                        Innovation & R&D
-                                    </a>
+
+                                    Innovation & R&D
+
                                 </h3>
                                 <p class="feature-text">
                                     Focus on new molecules and improved formulations.
@@ -402,9 +402,9 @@
                                     </div>
                                 </div>
                                 <h3 class="feature-title">
-                                    <a href="about.html">
-                                        Affordable Quality
-                                    </a>
+
+                                    Affordable Quality
+
                                 </h3>
                                 <p class="feature-text">
                                     High-quality care accessible to every Nepali household.
