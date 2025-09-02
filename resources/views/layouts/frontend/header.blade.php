@@ -54,7 +54,7 @@
                         <li class="menu-item-has-children">
                             <a href="/blogs">Blogs</a>
                             <ul class="sub-menu">
-                                <li><a href="products-grid-sidebar.html">Ohm Bytes</a></li>
+                                <li><a href="/ohm-bytes">Ohm Bytes</a></li>
                                 <li><a href="products-list.html">Ohm Insights</a></li>
                                 <li><a href="products-list-sidebar.html">Ohm Sikauchha</a></li>
                             </ul>
