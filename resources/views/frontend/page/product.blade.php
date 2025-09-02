@@ -1,4 +1,23 @@
 @extends('layouts.frontend.master')
+<style>
+    .product-img {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-img img {
+        max-height: 180px;
+        width: auto;
+    }
+
+    .product-content {
+        text-align: center;
+    }
+</style>
 @section('content')
     <section class="z-index-common breadcumb-wrapper" data-bg-src="frontend/assets/img/bg/b-1-3.png">
         <div class="container">
@@ -49,39 +68,46 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-
                     <div class="tab-content" id="myTabContent">
-
                         <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel"
                             aria-labelledby="profile-tab" tabindex="0">
+
                             <div class="row">
                                 @if ($products->isNotEmpty())
                                     @foreach ($products as $pd)
-                                        <div class="col-xl-4 col-lg-4 col-md-6">
-                                            <div class="vs-product product-style6">
+                                        {{-- Product 1 --}}
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="vs-product product-style1">
                                                 <div class="product-img">
                                                     <a href="{{ route('productssingle', $pd->slug) }}">
-                                                        {!! get_image($pd->image, '', 'home-product') !!}
+                                                        {!! get_image($pd->image) !!}
                                                     </a>
 
+                                                    {{-- <a class="product-tag2" href="#">30% OFF</a> --}}
                                                 </div>
-                                                <div class="product-content">
+                                                <div class="product-content" style="margin-bottom: 10px;">
 
-                                                    <h3 class="product-title"> <a
-                                                            href="{{ route('productssingle', $pd->slug) }}">{{ $pd->name ?? '' }}</a>
+                                                    <h3 class="product-title"><a
+                                                            href="{{ route('productssingle', $pd->slug) }}">
+                                                            {{ $pd->name ?? '' }}
+                                                        </a>
+                                                        <span class="product-cate">{{ $pd->category[0]->name ?? '' }}</span>
+
                                                     </h3>
+                                                    {{-- <span class="product-cate">CBD 100MG</span> --}}
+                                                    {{-- <span class="product-price">$39.00</span> --}}
 
                                                 </div>
                                             </div>
                                         </div>
                                     @endforeach
                                 @endif
-
                             </div>
 
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

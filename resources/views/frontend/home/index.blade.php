@@ -250,30 +250,26 @@
                         @php
                             $prd = getProductByID($pd);
                         @endphp
-                        {{-- Product 1 --}}
-                        <div class="col-lg-3 col-md-6">
-                            <div class="vs-product product-style1">
-                                <div class="product-img">
-                                    <a href="{{ route('productssingle', $prd->slug) }}">
-                                        {!! get_image($prd->image, '', 'home-product') !!}
-                                    </a>
-                                    {{-- <a class="product-tag2" href="#">30% OFF</a> --}}
-                                </div>
-                                <div class="product-content">
-                                    {{-- <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
-                                    style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></div> --}}
-                                    <h3 class="product-title"><a href="{{ route('productssingle', $prd->slug) }}">
-                                            {{ $prd->name ?? '' }}
+
+                        @if ($prd)
+                            <div class="col-lg-3 col-md-6">
+                                <div class="vs-product product-style1">
+                                    <div class="product-img">
+                                        <a href="{{ route('productssingle', $prd->slug) }}">
+                                            {!! get_image($prd->image, '', 'home-product') !!}
                                         </a>
-                                        <span class="product-cate">{{ $prd->category[0]->name ?? '' }}</span>
-
-                                    </h3>
-                                    {{-- <span class="product-cate">CBD 100MG</span> --}}
-                                    {{-- <span class="product-price">$39.00</span> --}}
-
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="product-title">
+                                            <a href="{{ route('productssingle', $prd->slug) }}">
+                                                {{ $prd->name ?? '' }}
+                                            </a>
+                                            <span class="product-cate">{{ $prd->category[0]->name ?? '' }}</span>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
                 </div>
 
