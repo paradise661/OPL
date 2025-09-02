@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="product-content" style="margin-bottom: 10px;">
 
-                                    <h3 class="product-title"><a href="{{ route('productssingle', $packs->slug) }}">
+                                    <h3 class="product-title"><a href="{{ route('productcategorysingle', $packs->slug) }}">
                                             {{ $packs->name ?? '' }}
                                         </a>
                                         <span class="product-cate">{{ $packs->category[0]->name ?? '' }}</span>
