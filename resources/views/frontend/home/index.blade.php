@@ -244,7 +244,26 @@
                         </div>
                     </div>
                 </div>
+                <style>
+                    .product-img {
+                        width: 100%;
+                        height: 350px;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
 
+                    .product-img img {
+                        max-height: 180px;
+                        width: auto;
+                        object-fit: contain;
+                    }
+
+                    .product-content {
+                        text-align: center;
+                    }
+                </style>
                 <div class="row">
                     @foreach ($setting['product'] as $pd)
                         @php

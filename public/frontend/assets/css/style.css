@@ -4956,7 +4956,7 @@ a.text-theme:hover,
   font-weight: 700;
 }
 .header-call a:hover {
-  color: var(--theme-color);
+  color: #ffffff;
 }
 .header-call.style2 {
   color: var(--white-color);

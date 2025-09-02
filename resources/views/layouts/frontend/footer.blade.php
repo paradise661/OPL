@@ -8,9 +8,16 @@
                         <div class="vs-widget-about">
                             <div class="footer-logo">
                                 <a class="logo" href="/">
-                                    <img src="{{ $setting['site_footer_logo'] ? asset(get_media($setting['site_footer_logo'])->fullurl) : '' }}"
-                                        alt="{{ $setting['site_footer_logo'] ? get_media($setting['site_footer_logo'])->alt : '' }}"
-                                        width="100px" height="90px">
+                                    @php
+                                        $footerLogo = isset($setting['site_footer_logo'])
+                                            ? get_media($setting['site_footer_logo'])
+                                            : null;
+                                    @endphp
+
+                                    <img src="{{ $footerLogo ? asset($footerLogo->fullurl) : asset('frontend/assets/img/default-logo.png') }}"
+                                        alt="{{ $footerLogo ? $footerLogo->alt : 'Footer Logo' }}" width="100px"
+                                        height="90px">
+
                                 </a>
                             </div>
                             <p class="footer-text">Aliquet eget sit amet tellus cras adipiscing
@@ -35,7 +42,8 @@
                         <div class="footer-info">
                             <div class="footer-info__icon">
                                 <i>
-                                    <img src="frontend/assets/img/icons/footer-info-1-1.png" alt="footer info">
+                                    <img src="{{ asset('frontend/assets/img/icons/footer-info-1-1.png') }}"
+                                        alt="footer info">
                                 </i>
                             </div>
                             <div class="media-body">
@@ -47,7 +55,8 @@
                         <div class="footer-info">
                             <div class="footer-info__icon">
                                 <i>
-                                    <img src="frontend/assets/img/icons/footer-info-1-2.png" alt="footer info">
+                                    <img src="{{ asset('frontend/assets/img/icons/footer-info-1-2.png') }}"
+                                        alt="footer info">
                                 </i>
                             </div>
                             <div class="media-body">
@@ -60,7 +69,8 @@
                         <div class="footer-info">
                             <div class="footer-info__icon">
                                 <i>
-                                    <img src="frontend/assets/img/icons/footer-info-1-3.png" alt="footer info">
+                                    <img src="{{ asset('frontend/assets/img/icons/footer-info-1-3.png') }}"
+                                        alt="footer info">
                                 </i>
                             </div>
                             <div class="media-body">

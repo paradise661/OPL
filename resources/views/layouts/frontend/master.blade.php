@@ -12,31 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57"
-        href="{{ asset($setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : 'frontend/images/logo.png') }}"
-        type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('frontend/assets/img/favicons/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('frontend/assets/img/favicons/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('frontend/assets/img/favicons/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114"
-        href="{{ asset('frontend/assets/img/favicons/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120"
-        href="{{ asset('frontend/assets/img/favicons/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144"
-        href="{{ asset('frontend/assets/img/favicons/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152"
-        href="{{ asset('frontend/assets/img/favicons/apple-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ asset('frontend/assets/img/favicons/apple-icon-180x180.png') }}">
+    <!-- Dynamic Favicon -->
     <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('frontend/assets/img/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96"
-        href="{{ asset('frontend/assets/img/favicons/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('frontend/assets/img/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('frontend/assets/img/favicons/manifest.json') }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('frontend/assets/img/favicons/ms-icon-144x144.png') }}">
+        href="{{ $setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : asset('frontend/images/logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ $setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : asset('frontend/images/logo.png') }}">
+    <meta name="msapplication-TileImage"
+        content="{{ $setting['site_fav_icon'] ? get_media($setting['site_fav_icon'])->fullurl : asset('frontend/images/logo.png') }}">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Google Fonts -->
@@ -49,6 +31,7 @@
     <!-- All CSS Files -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/nice-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.min.css') }}">
