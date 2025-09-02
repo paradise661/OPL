@@ -62,7 +62,9 @@
                                 </span>
 
                                 <img src="{{ $setting['site_main_logo'] ? asset(get_media($setting['site_main_logo'])->fullurl) : '' }}"
-                                    alt="{{ $setting['site_main_logo'] ? get_media($setting['site_main_logo'])->alt : 'Ohm Pharmaceuticals' }}">
+                                    alt="{{ $setting['site_main_logo'] ? get_media($setting['site_main_logo'])->alt : 'Ohm Pharmaceuticals' }}"
+                                    style="max-width: 200px; height: auto;">
+
                             </a>
                         </div>
                         <!-- /Logo -->
