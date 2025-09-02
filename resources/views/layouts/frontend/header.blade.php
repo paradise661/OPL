@@ -51,13 +51,13 @@
                             </ul>
                         </li>
                         <li><a href="/departments">Department</a></li>
-                        <li class="menu-item-has-children">
+                        <li>
                             <a href="/blogs">Blogs</a>
-                            <ul class="sub-menu">
+                            {{-- <ul class="sub-menu">
                                 <li><a href="/ohm-bytes">Ohm Bytes</a></li>
                                 <li><a href="/ebook">Ohm Insights</a></li>
                                 <li><a href="/ohm-sikauchha">Ohm Sikauchha</a></li>
-                            </ul>
+                            </ul> --}}
                         </li>
                         <li class="menu-item-has-children">
                             <a href="/gallery">Gallery</a>
