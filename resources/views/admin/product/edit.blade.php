@@ -92,11 +92,13 @@
                                                         $gallery = get_gallery($product->gallery);
                                                     @endphp
                                                     @foreach ($gallery as $galls)
-                                                        <div
-                                                            class="col thumbnails media-wrapper d-flex justify-content-center align-items-center">
-                                                            <img id="gallery_img" src="{{ asset($galls->fullurl) }}"
-                                                                alt="{{ $galls->alt }}">
-                                                        </div>
+                                                        @if ($galls && !empty($galls->fullurl))
+                                                            <div
+                                                                class="col thumbnails media-wrapper d-flex justify-content-center align-items-center">
+                                                                <img id="gallery_img" src="{{ asset($galls->fullurl) }}"
+                                                                    alt="{{ $galls->alt ?? 'gallery-image' }}">
+                                                            </div>
+                                                        @endif
                                                     @endforeach
                                                 @else
                                                     <div
